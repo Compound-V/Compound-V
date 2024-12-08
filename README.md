@@ -43,7 +43,7 @@ _<mark style="color:blue;">Why it’s useful?</mark>_
 
 ***
 
-**2. Interactive Query Console with&#x20;**<mark style="color:red;">**osqueryi**</mark>
+**2. Interactive Query Console with** [<mark style="color:red;">**osqueryi**</mark>](os-query/os-query/using-osqueryi/)
 
 * **Purpose:**
   * Provides a SQL-based interactive console for system exploration and debugging.

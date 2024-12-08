@@ -25,7 +25,7 @@ In this mode, Os-query is completely standalone, does not communicate with a dae
 ## <mark style="color:yellow;">Key Features</mark>
 
 * **Interactive SQL Shell**: Run real-time queries to explore system data.
-* **Pre-Built Tables**: Access system info like processes, users, and network connections.
+* [**Pre-Built Tables**](osqueryi-table.md): Access system info like processes, users, and network connections.
 * **Ad-Hoc Querying**: Perform quick investigations without setup.
 * **Cross-Platform**: Works on Windows, macOS, Linux, and more.
 * **Fast and Lightweight**: Instant results with minimal overhead.
