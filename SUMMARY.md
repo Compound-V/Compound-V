@@ -5,6 +5,7 @@
 
 ## OS-Query
 
-* [OS - Query](os-query/os-query/README.md)
-  * [Using osqueryi](os-query/os-query/using-osqueryi.md)
+* [OS - Query](os-query/os-query.md)
+  * [Using osqueryi](os-query/os-query/using-osqueryi/README.md)
+    * [Osqueryi Table](os-query/os-query/using-osqueryi/osqueryi-table.md)
 * [Page](os-query/page.md)

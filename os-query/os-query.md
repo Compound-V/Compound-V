@@ -1,13 +1,13 @@
 ---
 description: >-
-  s-query is an operating system instrumentation framework for Windows, OS X
+  Os-query is an operating system instrumentation framework for Windows, OS X
   (macOS), and Linux. The tools make low-level operating system analytics and
   monitoring both performant and intuitive.
 ---
 
 # OS - Query
 
-### <mark style="color:green;">**Introduction**</mark>
+## <mark style="color:green;">**Introduction**</mark>
 
 <mark style="color:yellow;">**Os-query exposes an operating system as a high-performance relational database.**</mark> This allows you to write SQL queries to explore operating system data.
 
@@ -20,7 +20,9 @@ With Os-query, SQL tables represent abstract concepts such as -&#x20;
 5. Hardware events
 6. File hashes
 
-### <mark style="color:green;">**Features of Os-query**</mark>
+### _You can download Os-query from ->_ [_https://osquery.io/_](https://osquery.io/)&#x20;
+
+## <mark style="color:green;">**Features of Os-query**</mark>
 
 **1. Distributed Host Monitoring with&#x20;**<mark style="color:red;">**osqueryd**</mark>
 
