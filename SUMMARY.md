@@ -8,4 +8,4 @@
 
 ## Powershell
 
-* [Powershell](powershell/powershell.md)
+* [Powershell (Core)](powershell/powershell-core.md)
