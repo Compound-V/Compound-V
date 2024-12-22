@@ -16,3 +16,8 @@
 ## Computer Security (B4M36BSY)
 
 * [Classes Document](computer-security-b4m36bsy/classes-document.md)
+
+## Research Paper
+
+* [Word-Embeddings & Anomaly Classification from Event Logs](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/README.md)
+  * [HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/hdbscan-hierarchical-density-based-spatial-clustering-of-applications-with-noise.md)
