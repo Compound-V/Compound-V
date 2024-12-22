@@ -20,6 +20,7 @@
 ## Research Paper
 
 * [Word-Embeddings & Anomaly Classification from Event Logs](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/README.md)
-  * [DBSCAN (Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/dbscan-density-based-spatial-clustering-of-applications-with-noise.md)
-  * [HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/hdbscan-hierarchical-density-based-spatial-clustering-of-applications-with-noise.md)
   * [Word Embedding for Anomaly Detection](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/word-embedding-for-anomaly-detection.md)
+  * [DBSCAN (Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/dbscan-density-based-spatial-clustering-of-applications-with-noise.md)
+  * [HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/hdbscan-hierarchical-density-based-spatial-clustering-of-applications-with-noise/README.md)
+    * [HDBSCAN vs DBSCAN: In-depth Comparison](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/hdbscan-hierarchical-density-based-spatial-clustering-of-applications-with-noise/hdbscan-vs-dbscan-in-depth-comparison.md)
