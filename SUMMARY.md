@@ -24,3 +24,4 @@
   * [DBSCAN (Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/dbscan-density-based-spatial-clustering-of-applications-with-noise.md)
   * [HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/hdbscan-hierarchical-density-based-spatial-clustering-of-applications-with-noise/README.md)
     * [HDBSCAN vs DBSCAN: In-depth Comparison](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/hdbscan-hierarchical-density-based-spatial-clustering-of-applications-with-noise/hdbscan-vs-dbscan-in-depth-comparison.md)
+  * [Isolation Forest](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/isolation-forest.md)
