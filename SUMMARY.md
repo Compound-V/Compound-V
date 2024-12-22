@@ -20,4 +20,6 @@
 ## Research Paper
 
 * [Word-Embeddings & Anomaly Classification from Event Logs](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/README.md)
+  * [DBSCAN (Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/dbscan-density-based-spatial-clustering-of-applications-with-noise.md)
   * [HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise)](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/hdbscan-hierarchical-density-based-spatial-clustering-of-applications-with-noise.md)
+  * [Page 2](research-paper/word-embeddings-and-anomaly-classification-from-event-logs/page-2.md)

@@ -107,7 +107,7 @@ This process makes HDBSCAN highly effective at identifying clusters with varying
 HDBSCAN is implemented in Python and is available as a library: `hdbscan`. Below is an example of how to use it:
 
 ```python
-pythonCopy codeimport hdbscan
+import hdbscan
 import numpy as np
 import matplotlib.pyplot as plt
 
