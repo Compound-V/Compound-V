@@ -29,3 +29,8 @@
 ## Group 1
 
 * [ls command](group-1/ls-command.md)
+
+## 7th Sem
+
+* [Risk Analysis & Mitigation](7th-sem/risk-analysis-and-mitigation/README.md)
+  * [Unit 1](7th-sem/risk-analysis-and-mitigation/unit-1.md)
