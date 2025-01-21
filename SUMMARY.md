@@ -15,7 +15,8 @@
 
 ## Computer Security (B4M36BSY)
 
-* [Classes Document](computer-security-b4m36bsy/classes-document.md)
+* [Classes Document](computer-security-b4m36bsy/classes-document/README.md)
+  * [Class 1](computer-security-b4m36bsy/classes-document/class-1.md)
 
 ## Research Paper
 
