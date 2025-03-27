@@ -35,3 +35,14 @@
 
 * [Risk Analysis & Mitigation](7th-sem/risk-analysis-and-mitigation/README.md)
   * [Unit 1](7th-sem/risk-analysis-and-mitigation/unit-1.md)
+
+## Group 2
+
+* [CCNA Class 1](group-2/ccna-class-1.md)
+* [CCNA Class 2](group-2/ccna-class-2.md)
+* [CCNA Class 3](group-2/ccna-class-3.md)
+* [CCNA Class 4](group-2/ccna-class-4.md)
+* [Page 5](group-2/page-5.md)
+* [Page](group-2/page.md)
+* [Page 3](group-2/page-3.md)
+* [Page 4](group-2/page-4.md)
