@@ -42,7 +42,7 @@
 * [CCNA Class 2](group-2/ccna-class-2.md)
 * [CCNA Class 3](group-2/ccna-class-3.md)
 * [CCNA Class 4](group-2/ccna-class-4.md)
-* [Page 5](group-2/page-5.md)
+* [CCNA Class 5](group-2/ccna-class-5.md)
 * [Page](group-2/page.md)
 * [Page 3](group-2/page-3.md)
 * [Page 4](group-2/page-4.md)
