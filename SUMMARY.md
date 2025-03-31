@@ -56,3 +56,5 @@
 * [Bandit Level 2 → Level 3](over-the-wire/bandit-level-2-level-3.md)
 * [Bandit Level 3 -> Level 4](over-the-wire/bandit-level-3-greater-than-level-4.md)
 * [Bandit Level 4 → Level 5](over-the-wire/bandit-level-4-level-5.md)
+* [Bandit Level 5 → Level 6](over-the-wire/bandit-level-5-level-6.md)
+* [Page 1](over-the-wire/page-1.md)
