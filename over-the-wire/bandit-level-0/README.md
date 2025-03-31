@@ -1,3 +1,7 @@
+---
+description: This is Over The Wire Bandit Series . . .
+---
+
 # Bandit Level 0
 
 ## **Problem: Bandit Level 0**
