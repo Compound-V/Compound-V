@@ -64,7 +64,7 @@
   * [Bandit Level 10 → Level 11](over-the-wire/bandit-level-0/bandit-level-10-level-11.md)
   * [Bandit Level 11 → Level 12](over-the-wire/bandit-level-0/bandit-level-11-level-12.md)
   * [Bandit Level 12 → Level 13](over-the-wire/bandit-level-0/bandit-level-12-level-13.md)
-  * [Page 6](over-the-wire/bandit-level-0/page-6.md)
+  * [Bandit Level 13 -> Level 14](over-the-wire/bandit-level-0/bandit-level-13-greater-than-level-14.md)
   * [Page 7](over-the-wire/bandit-level-0/page-7.md)
   * [Page 5](over-the-wire/bandit-level-0/page-5.md)
   * [Page 2](over-the-wire/bandit-level-0/page-2.md)
