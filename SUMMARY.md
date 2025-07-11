@@ -83,3 +83,12 @@
 
 * [Linux Fundamentals](hack-the-box/linux-fundamentals.md)
 * [Linux Fundamentals - 1](hack-the-box/linux-fundamentals-1.md)
+
+***
+
+* [Linux Fundamentals 2](linux-fundamentals-2.md)
+
+## WSL ( Windows Subsystem for Linux )
+
+* [How to setup Kali Linux with WSL2](wsl-windows-subsystem-for-linux/how-to-setup-kali-linux-with-wsl2.md)
+* [Untitled](wsl-windows-subsystem-for-linux/untitled.md)
