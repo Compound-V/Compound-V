@@ -87,8 +87,15 @@
 ***
 
 * [Linux Fundamentals 2](linux-fundamentals-2.md)
+* [Linux Fundamentals - 3](linux-fundamentals-3.md)
+* [Page 6](page-6.md)
 
 ## WSL ( Windows Subsystem for Linux )
 
 * [How to setup Kali Linux with WSL2](wsl-windows-subsystem-for-linux/how-to-setup-kali-linux-with-wsl2.md)
 * [Untitled](wsl-windows-subsystem-for-linux/untitled.md)
+
+## Group 4
+
+* [Find Command](group-4/find-command.md)
+* [Page 8](group-4/page-8.md)
