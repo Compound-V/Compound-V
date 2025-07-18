@@ -1,8 +1,16 @@
 # Table of contents
 
+## Group 5
+
+* [Poking the Filesystem - slide 1](README.md)
+
+***
+
+* [Poking the Filesystem - slide 2](poking-the-filesystem-slide-2.md)
+
 ## OS-Query
 
-* [OS - Query](README.md)
+* [OS - Query](<README (1).md>)
   * [Using osqueryi](os-query/os-query/using-osqueryi/README.md)
     * [Osqueryi Table](os-query/os-query/using-osqueryi/osqueryi-table.md)
 
