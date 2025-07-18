@@ -6,7 +6,11 @@
 
 ***
 
-* [Poking the Filesystem - slide 2](poking-the-filesystem-slide-2.md)
+* [Poking the Filesystem - slide 2](poking-the-filesystem-slide-2/README.md)
+  * [Superblock](poking-the-filesystem-slide-2/superblock.md)
+* [Poking the Filesystem - slide 3](poking-the-filesystem-slide-3/README.md)
+  * [Poking the Filesystem slides and Structure of Linux Filesystem Stack](poking-the-filesystem-slide-3/poking-the-filesystem-slides-and-structure-of-linux-filesystem-stack.md)
+  * [Types of Filesystem](poking-the-filesystem-slide-3/types-of-filesystem.md)
 
 ## OS-Query
 

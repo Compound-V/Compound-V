@@ -4,7 +4,7 @@
 
 DBSCAN is a popular unsupervised clustering algorithm designed to discover clusters based on the density of data points in a region. Unlike traditional clustering algorithms such as K-Means, DBSCAN does not require the number of clusters to be specified in advance. Instead, it identifies regions of high density as clusters and marks points in low-density regions as noise.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ***
 

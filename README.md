@@ -6,7 +6,7 @@ description: >-
 
 # Poking the Filesystem - slide 1
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ## Slide 1: Filesystem Trust Kyun Badi Problem Hai
 

@@ -2,7 +2,7 @@
 
 ## **TCP/IP Model ->**
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>OSI vs TCP/IP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>OSI vs TCP/IP</p></figcaption></figure>
 
 ## OSI vs TCP/IP Protocol comparison Chart
 
@@ -102,7 +102,7 @@ For a more detailed information on various types of Protocols visit here - [http
 
 
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>DNS</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>DNS</p></figcaption></figure>
 
 ## <mark style="color:green;">The DNS Resolution Process: A Clear Guide</mark>
 
