@@ -1,8 +1,10 @@
 # Table of contents
 
+* [Page 9](README.md)
+
 ## Group 5
 
-* [Poking the Filesystem - slide 1](README.md)
+* [Poking the Filesystem - slide 1](<README (1).md>)
 
 ***
 
@@ -14,7 +16,7 @@
 
 ## OS-Query
 
-* [OS - Query](<README (1).md>)
+* [OS - Query](<README (1) (1).md>)
   * [Using osqueryi](os-query/os-query/using-osqueryi/README.md)
     * [Osqueryi Table](os-query/os-query/using-osqueryi/osqueryi-table.md)
 
@@ -111,3 +113,9 @@
 
 * [Find Command](group-4/find-command.md)
 * [Page 8](group-4/page-8.md)
+
+## Projects
+
+* [DNS Enumeration Framework (Day-1)](projects/dns-enumeration-framework-day-1/README.md)
+  * [(Day-1) - Writing Modules](projects/dns-enumeration-framework-day-1/day-1-writing-modules.md)
+* [Page 10](projects/page-10.md)

@@ -1,8 +1,10 @@
 # Poking the Filesystem - slide 3
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
 
 ***
+
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 ### <mark style="color:yellow;">**USER SPACE Kya Hai?**</mark>
 
@@ -86,7 +88,7 @@
 
 ***
 
-
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 ### <mark style="color:yellow;">VFS (Virtual Filesystem Switch)</mark>
 
@@ -154,53 +156,70 @@
 
 ***
 
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
 ### <mark style="color:yellow;">**FILESYSTEM IMPLEMENTATIONS**</mark>
 
 
 
-1. **FILESYSTEM IMPLEMENTATIONS Kya Hai?**
-   * FILESYSTEM IMPLEMENTATIONS Linux Filesystem Stack ka woh hissa hai jo VFS ke neeche aata hai aur actual data storage aur management ke liye responsible hota hai. Yeh alag-alag types ke filesystems ko implement karta hai jo disk ya memory pe data organize karte hain.
-   * Yeh layer VFS ke abstract interface ko real-world filesystems (jaise ext4, NFS) se jodti hai, jahan specific features jaise journaling, indexing, ya networking support add hote hain.
-   * Simple analogy: Yeh ek factory hai jo VFS ke blueprint (abstract design) ko alag-alag products (filesystems) mein badal deta hai, har ek ke apne features ke saath.
-   * Example: Jab tu `mkfs.ext4 /dev/sdb1` karke ek ext4 filesystem banata hai, yeh layer usko create aur manage karta hai.
-2. **Core Content Kya Hai Aur Kaise Kaam Karta Hai?**
-   * **Purpose**: Yeh filesystems ko VFS ke liye specific implementations deta hai, jo data storage, retrieval, aur metadata management handle karte hain.
-   * **Types Aur Sub-Categories**:
-     * **Local Filesystems**:
-       * **ext4, XFS, Btrfs, F2FS**: Yeh disk-based filesystems hain jo local storage (HDD/SSD) pe kaam karte hain.
-       * **Features**: Block allocation, journaling (data consistency), metadata management, aur directory indexing.
-       * **ext4 Example**:
-         * Journaling (via JBD2) jo data corruption se bachata hai.
-         * Extents jo space efficiency badhate hain (bade files ke liye).
-         * HTree indexing jo directory lookup ko tezi se karta hai.
-         * Delayed allocation jo write performance optimize karta hai.
-     * **Network Filesystems**:
-       * **NFS**: Network File System jo RPC (Remote Procedure Call) ke zariye remote mounts ko support karta hai.
-       * **CIFS/SMB**: Windows-compatible sharing ke liye istemal hota hai, jaise network drives.
-       * **FUSE**: Filesystem in Userspace jo user-level filesystem support deta hai (jaise SSHFS).
-     * **Virtual / Pseudo Filesystems**:
-       * **procfs**: `/proc` directory jo process information (jaise `/proc/cpuinfo`) provide karta hai.
-       * **sysfs**: `/sys` directory jo kernel objects aur hardware info deta hai.
-       * **tmpfs**: In-memory filesystem jo RAM mein temporary data store karta hai (jaise `/dev/shm`).
-   * Example: Tu `mount -t nfs remote:/data /mnt` karta hai – NFS network filesystem implement karta hai aur VFS ke through data access deta hai.
-3. **Technical Depth**
-   * Har filesystem apna data structure aur algorithm use karta hai – jaise ext4 ka journaling JBD2 module ke zariye crash recovery deta hai, jabki Btrfs copy-on-write (CoW) use karta hai snapshots ke liye.
-   * Local filesystems block allocation ke liye bitmap ya extent-based systems use karte hain, jo disk space ko manage karta hai.
-   * Network filesystems jaise NFS RPC protocol aur locking mechanisms (jaise NLM) use karte hain taaki remote data access synchronized rahe.
-   * Pseudo filesystems jaise procfs aur sysfs kernel memory se directly data generate karte hain, bina physical disk ke, jo runtime information provide karta hai.
-4. **Practical Example**
-   * Scenario: Tu ek system mein local aur network filesystem use karna chahta hai.
-   * Process:
-     1. Tu `mkfs.ext4 /dev/sdc1` chalake ek ext4 filesystem banata hai aur `mount /dev/sdc1 /mnt/local` karta hai.
-     2. `ls /mnt/local` se files check karta hai – ext4 ka HTree indexing tezi se directory list deta hai.
-     3. Phir `mount -t nfs server:/data /mnt/network` karke NFS mount karta hai.
-     4. `ls /mnt/network` se remote files access hote hain – NFS RPC calls handle karta hai.
-   * Check: `df -h` se mounted filesystems ki size aur type dekho, ya `cat /proc/mounts` se verify karo.
-5. **Kyun Zaroori Hai?**
-   * **Variety**: Alag-alag needs ke liye alag filesystems (local, network, virtual) provide karta hai.
-   * **Efficiency**: Features jaise journaling (ext4) ya CoW (Btrfs) data integrity aur performance badhate hain.
-   * **Scalability**: Network filesystems jaise NFS distributed systems ke liye scale karte hain.
-6. **Security Aur Maintenance Tips**
+1.  <mark style="color:yellow;">**FILESYSTEM IMPLEMENTATIONS Kya Hai?**</mark>
+
+    * FILESYSTEM IMPLEMENTATIONS Linux Filesystem Stack ka woh hissa hai jo VFS ke neeche aata hai aur actual data storage aur management ke liye responsible hota hai. Yeh alag-alag types ke filesystems ko implement karta hai jo disk ya memory pe data organize karte hain.
+    * Yeh layer VFS ke abstract interface ko real-world filesystems (jaise ext4, NFS) se jodti hai, jahan specific features jaise journaling, indexing, ya networking support add hote hain.
+    * Simple analogy: Yeh ek factory hai jo VFS ke blueprint (abstract design) ko alag-alag products (filesystems) mein badal deta hai, har ek ke apne features ke saath.
+    * Example: Jab tu `mkfs.ext4 /dev/sdb1` karke ek ext4 filesystem banata hai, yeh layer usko create aur manage karta hai.
+
+
+2.  <mark style="color:yellow;">**Core Content Kya Hai Aur Kaise Kaam Karta Hai?**</mark>
+
+    * **Purpose**: Yeh filesystems ko VFS ke liye specific implementations deta hai, jo data storage, retrieval, aur metadata management handle karte hain.
+    * **Types Aur Sub-Categories**:
+      * **Local Filesystems**:
+        * **ext4, XFS, Btrfs, F2FS**: Yeh disk-based filesystems hain jo local storage (HDD/SSD) pe kaam karte hain.
+        * **Features**: Block allocation, journaling (data consistency), metadata management, aur directory indexing.
+        * **ext4 Example**:
+          * Journaling (via JBD2) jo data corruption se bachata hai.
+          * Extents jo space efficiency badhate hain (bade files ke liye).
+          * HTree indexing jo directory lookup ko tezi se karta hai.
+          * Delayed allocation jo write performance optimize karta hai.
+      * **Network Filesystems**:
+        * **NFS**: Network File System jo RPC (Remote Procedure Call) ke zariye remote mounts ko support karta hai.
+        * **CIFS/SMB**: Windows-compatible sharing ke liye istemal hota hai, jaise network drives.
+        * **FUSE**: Filesystem in Userspace jo user-level filesystem support deta hai (jaise SSHFS).
+      * **Virtual / Pseudo Filesystems**:
+        * **procfs**: `/proc` directory jo process information (jaise `/proc/cpuinfo`) provide karta hai.
+        * **sysfs**: `/sys` directory jo kernel objects aur hardware info deta hai.
+        * **tmpfs**: In-memory filesystem jo RAM mein temporary data store karta hai (jaise `/dev/shm`).
+    * Example: Tu `mount -t nfs remote:/data /mnt` karta hai – NFS network filesystem implement karta hai aur VFS ke through data access deta hai.
+
+
+3.  <mark style="color:yellow;">**Technical Depth**</mark>
+
+    * Har filesystem apna data structure aur algorithm use karta hai – jaise ext4 ka journaling JBD2 module ke zariye crash recovery deta hai, jabki Btrfs copy-on-write (CoW) use karta hai snapshots ke liye.
+    * Local filesystems block allocation ke liye bitmap ya extent-based systems use karte hain, jo disk space ko manage karta hai.
+    * Network filesystems jaise NFS RPC protocol aur locking mechanisms (jaise NLM) use karte hain taaki remote data access synchronized rahe.
+    * Pseudo filesystems jaise procfs aur sysfs kernel memory se directly data generate karte hain, bina physical disk ke, jo runtime information provide karta hai.
+
+
+4.  <mark style="color:yellow;">**Practical Example**</mark>
+
+    * Scenario: Tu ek system mein local aur network filesystem use karna chahta hai.
+    * Process:
+      1. Tu `mkfs.ext4 /dev/sdc1` chalake ek ext4 filesystem banata hai aur `mount /dev/sdc1 /mnt/local` karta hai.
+      2. `ls /mnt/local` se files check karta hai – ext4 ka HTree indexing tezi se directory list deta hai.
+      3. Phir `mount -t nfs server:/data /mnt/network` karke NFS mount karta hai.
+      4. `ls /mnt/network` se remote files access hote hain – NFS RPC calls handle karta hai.
+    * Check: `df -h` se mounted filesystems ki size aur type dekho, ya `cat /proc/mounts` se verify karo.
+
+
+5.  <mark style="color:yellow;">**Kyun Zaroori Hai?**</mark>
+
+    * **Variety**: Alag-alag needs ke liye alag filesystems (local, network, virtual) provide karta hai.
+    * **Efficiency**: Features jaise journaling (ext4) ya CoW (Btrfs) data integrity aur performance badhate hain.
+    * **Scalability**: Network filesystems jaise NFS distributed systems ke liye scale karte hain.
+
+
+6. <mark style="color:yellow;">**Security Aur Maintenance Tips**</mark>
    * **Consistency Checks**: `fsck` ya `btrfs check` se filesystem errors detect aur fix karo.
    * **Access Control**: `chmod` aur `chown` se file permissions set karo, khas kar network filesystems ke liye.
    * **Backup**: Network filesystems (NFS) ke liye regular backups (jaise `rsync`) rakho.
