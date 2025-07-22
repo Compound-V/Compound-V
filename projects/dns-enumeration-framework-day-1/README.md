@@ -73,9 +73,9 @@ description: >-
 
 ***
 
-#### 📦 Day 1 Add-on: Tool Structure & Setup Scripts
+## 📦 Day 1 Add-on: Tool Structure & Setup Scripts
 
-#### 🗂️ **Project Folder Structure**
+### 🗂️ **Project Folder Structure**
 
 ```
 dns_enum_framework/
@@ -99,7 +99,7 @@ dns_enum_framework/
 
 ***
 
-#### ⚙️ **Structure Creation in Windows (PowerShell Script)**
+### ⚙️ **Structure Creation in Windows (PowerShell Script)**
 
 ```powershell
 $root = "dns_enum_framework"
@@ -138,7 +138,7 @@ Write-Host "✅ Project structure created at $root"
 
 ***
 
-#### 🐧 **Structure Creation in Linux/macOS (Shell Script)**
+### 🐧 **Structure Creation in Linux/macOS (Shell Script)**
 
 ```bash
 #!/bin/bash
@@ -180,3 +180,139 @@ echo "✅ Project structure created at $root"
 
 ***
 
+### 🧠 DNS Enumeration Framework — Modular Architecture Map
+
+<figure><img src="../../.gitbook/assets/Untitled diagram _ Mermaid Chart-2025-07-21-231704.png" alt=""><figcaption></figcaption></figure>
+
+{% code lineNumbers="true" fullWidth="false" %}
+```mermaid
+---
+config:
+  layout: elk
+  theme: neo-dark
+  look: handDrawn
+---
+flowchart TD
+ subgraph CLI["CLI Entry & Input"]
+        E["input_handler.py <br> Validate Domain <br> Parse Flags <br> Load Wordlist"]
+        A["main.py <br> CLI Entry"]
+  end
+ subgraph ENUM["Enumeration & Threading"]
+        F["enumerator.py"]
+        F1["Active Recon <br> (--active)"]
+        F2["Passive Recon <br> (--passive)"]
+        F3["Threading Engine"]
+        F4["Merge Subdomains"]
+  end
+    A --> E
+    E --> F
+    F --> F1 & F2 & F3
+    F1 --> F4
+    F2 --> F4
+    F3 --> F4
+    F4 --> G["resolver.py <br> Wildcard Detection <br> DNS Record Resolution"]
+    G --> J{"Run probe?"}
+    J -- Yes --> K["probe.py <br> Liveness Check <br> (HTTP/ICMP)"]
+    J -- No --> M{"Run enrich?"}
+    K --> M
+    M -- Yes --> O["enricher.py <br> WHOIS / ASN / GeoIP"]
+    M -- No --> R["exporter.py <br> Aggregate &amp; Export"]
+    O --> R
+    R --> T["Results <br> (JSON / CSV / Markdown)"]
+
+```
+{% endcode %}
+
+```markdown
+                                 ┌────────────────── ┐
+                                 │   main.py (CLI)   │
+                                 └──────┬────────────┘
+                                        │
+                          ┌─────────────┼─────────────┐
+                          │             │             │
+                 ┌────────▼──────┐ ┌────▼───────┐ ┌────▼───────┐
+                 │  Validate     │ │  Parse     │ │  Load      │
+                 │  domain       │ │  flags     │ │  wordlist  │
+                 └────┬──────────┘ └────┬───────┘ └────┬───────┘
+                      │                 │              │
+                      │                 │              │
+                      │                 │              │
+                      └────┬────────────┴──────────────┘
+                           │
+                           ▼
+                    ┌───────────────┐
+                    │ input_handler │
+                    └─────┬─────────┘
+                          │
+                          ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ ENUMERATION MODULE                                                           │
+│                                                                              │
+│ ┌───────────────┬────────────────────────┬───────────────────────────────┐   │
+│ │ Active Recon  │ Passive Recon          │ Dynamic Threading             │   │
+│ │ (brute-force) │ (API integrations)     │ (scalable concurrency)        │   │
+│ └─────┬─────────┴───────────┬────────────┴───────────────────────────────┘   │
+│       ▼                     ▼                                                │
+│ ┌────────────┐      ┌──────────────┐                                         │
+│ │ resolver.py│◄─────┤ Discovered   │                                         │
+│ └────┬───────┘      │ subdomains   │                                         │
+└──────┼──────────────┴──────────────┘─────────────────────────────────────────┘
+       │
+       ▼
+┌────────────────────────────────────────┐
+│    Wildcard Filtering & DNS Records    │
+│    - Detect wildcard contamination     │
+│    - Resolve A/CNAME/MX/TXT records    │
+└────┬───────────────────────────────────┘
+     │
+     ▼
+┌────────────────────────────────────────────────────────┐
+│ probe.py (optional based on --probe flag)              │
+│ - HTTP status code check                               │
+│ - Ping/ICMP check (platform-aware)                     │
+└──────────┬─────────────────────────────────────────────┘
+           │
+           ▼
+┌──────────────────────────────────────────────────────── ┐
+│ enricher.py (optional based on --enrich or --metadata)  │
+│ - WHOIS lookup                                          │
+│ - ASN, GeoIP mapping                                    │
+│ - Reverse DNS                                           │
+└──────────┬──────────────────────────────────────────────┘
+           │
+           ▼
+┌────────────────────────────────────────────────────────┐
+│ exporter.py                                            │
+│ - Save to JSON, CSV                                    │
+│ - Markdown summary generation                          │
+│ - Optional tagging (live/dead/suspicious)              │
+└────────────────────────────────────────────────────────┘
+
+```
+
+***
+
+### 🔀 How It Behaves in Real Use
+
+#### 🎮 Trigger Behavior by Flags
+
+| Flag             | Action                                           |
+| ---------------- | ------------------------------------------------ |
+| `--passive-only` | Skips brute-force and uses APIs only             |
+| `--no-probe`     | Skips liveness check                             |
+| `--enrich`       | Triggers WHOIS, ASN, geo enrichment              |
+| `--export csv`   | Only saves CSV, skips JSON and Markdown          |
+| `--threads 10`   | Controls how many concurrent DNS queries are run |
+
+***
+
+### 💡 Why This Representation Works
+
+* Shows **conditional modules**
+* Highlights **user-driven branching**
+* Keeps modules **loosely coupled**—you could even run parts independently
+* Futureproofs for GUI integration, API mode, or batch scanning
+
+***
+
+**Yes I have taken help of AI in making this document ( cause why not )**

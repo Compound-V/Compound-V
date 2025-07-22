@@ -2,7 +2,7 @@
 
 ## **TCP/IP Model ->**
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>OSI vs TCP/IP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>OSI vs TCP/IP</p></figcaption></figure>
 
 ## OSI vs TCP/IP Protocol comparison Chart
 
