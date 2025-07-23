@@ -1,6 +1,13 @@
 # Table of contents
 
-* [Page 9](README.md)
+## Projects
+
+* [DNS Enumeration Framework (Day-1)](README.md)
+  * [(Day-1) - Writing Modules - input\_handler.py](projects/dns-enumeration-framework-day-1/day-1-writing-modules-input_handler.py/README.md)
+    * [(Day-2) Creating a test.py for input\_handler.py](projects/dns-enumeration-framework-day-1/day-1-writing-modules-input_handler.py/day-2-creating-a-test.py-for-input_handler.py.md)
+  * [(Day 2) - Writing Modules](projects/dns-enumeration-framework-day-1/day-2-writing-modules.md)
+* [Page 10](projects/page-10.md)
+* [Page 9](projects/page-9.md)
 
 ## Group 5
 
@@ -113,9 +120,3 @@
 
 * [Find Command](group-4/find-command.md)
 * [Page 8](group-4/page-8.md)
-
-## Projects
-
-* [DNS Enumeration Framework (Day-1)](projects/dns-enumeration-framework-day-1/README.md)
-  * [(Day-1) - Writing Modules](projects/dns-enumeration-framework-day-1/day-1-writing-modules.md)
-* [Page 10](projects/page-10.md)

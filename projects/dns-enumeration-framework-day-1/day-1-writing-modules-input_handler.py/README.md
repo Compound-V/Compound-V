@@ -2,7 +2,7 @@
 description: This is just me writing some modules because I was sitting Idle
 ---
 
-# (Day-1) - Writing Modules
+# (Day-1) - Writing Modules - input\_handler.py
 
 ## 🏗️ Module Build Plan (Pre-`main.py`)
 
@@ -34,17 +34,17 @@ This module prepares the input for your DNS enumeration tool:
 ```python
 import re
 
-# Part 1 - Validates the domain name (e.g. example.com)
+# Part 1: validate_domain(domain)
 def validate_domain(domain):
-    # Use regex to ensure domain is well-formed (e.g. not http://)
-    pattern = r"^(?:\*\.)?(?!-)[A-Za-z0-9-]{1,63}(?<!-)(?:\.(?!-)[A-Za-z0-9-]{1,63}(?<!-))*\.[A-Za-z]{2,63}\.?$"$"
+  
+    pattern = r"^(?!-)(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[A-Za-z]{2,63}\.?$"
     return re.match(pattern, domain)
 
-# Part 2 - Loads and cleans the wordlist file (e.g. ["www", "dev", "admin"])
+# Part 2: load_wordlist(path)
 def load_wordlist(path):
+    
     try:
         with open(path, 'r') as file:
-            # Strip whitespace and skip blanks
             words = [line.strip() for line in file if line.strip()]
         if not words:
             print("[!] Wordlist file is empty.")
@@ -52,10 +52,10 @@ def load_wordlist(path):
     except FileNotFoundError:
         print(f"[!] Wordlist file not found: {path}")
         return []
-        
 
-# Part 3 - Returns both in a format our scanner can work with.
+# Part 3: prepare_input(domain, wordlist_path)
 def prepare_input(domain, wordlist_path):
+    
     if not validate_domain(domain):
         print(f"[!] Invalid domain format: {domain}")
         return None, []
@@ -63,9 +63,10 @@ def prepare_input(domain, wordlist_path):
     words = load_wordlist(wordlist_path)
     if not words:
         print("[!] No words loaded from wordlist.")
-        return domain, []
+        return None, []
 
     return domain, words
+
 ```
 
 ***
@@ -88,8 +89,32 @@ import re
 # Part 1 - Validates the domain name (e.g. example.com)
 def validate_domain(domain):
     # Use regex to ensure domain is well-formed (e.g. not http://)
-    pattern = r"^(?:\*\.)?(?!-)[A-Za-z0-9-]{1,63}(?<!-)(?:\.(?!-)[A-Za-z0-9-]{1,63}(?<!-))*\.[A-Za-z]{2,63}\.?$"
+    pattern = r"^(?!-)(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[A-Za-z]{2,63}\.?$"
+    
     return re.match(pattern, domain)
+    
+"""
+  What's Happening Here ?
+  
+    Validates whether the given domain string is correctly formatted.
+
+    What this does:
+    1. Uses a regular expression to check if the domain is syntactically valid.
+       - Rejects full URLs (e.g., "http://example.com")
+       - Allows subdomains (e.g., "sub.example.com")
+       - Ensures compliance with domain naming rules
+
+    Regex Explanation:
+        ^                 : Start of string
+        (?!-)             : Domain can't start with a hyphen
+        (subpattern)      : Allows alphanumerics and hyphens in valid structure
+        \.                : Requires at least one dot between labels
+        [A-Za-z]{2,63}    : Top-level domain should be 2–63 characters
+
+    Returns:
+        - A match object if the domain is valid
+        - None if the domain is invalid
+"""
 ```
 
 #### 🧠 What’s Happening Here?
@@ -114,7 +139,7 @@ Examples it rejects:
 * **Regular Expressions** (regex) are pattern-matching rules used to validate or find structured data
 
 ```
-r"^(?:\*\.)?(?!-)[A-Za-z0-9-]{1,63}(?<!-)(?:\.(?!-)[A-Za-z0-9-]{1,63}(?<!-))*\.[A-Za-z]{2,63}\.?$"
+r"^(?!-)(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[A-Za-z]{2,63}\.?$"
 ```
 
 It matches:
@@ -145,6 +170,22 @@ def load_wordlist(path):
     except FileNotFoundError:
         print(f"[!] Wordlist file not found: {path}")
         return []
+        
+"""
+  What's Happening Here ?
+  
+    Loads and cleans a wordlist from the specified file.
+
+    What this does:
+    1. Opens the file at the provided path.
+    2. Reads all lines and strips whitespace.
+    3. Filters out any blank lines.
+    4. Handles missing files and empty content gracefully.
+
+    Returns:
+        - A list of cleaned wordlist entries (strings)
+        - An empty list if the file is missing or contains no valid lines
+"""
 ```
 
 #### 🧠 What’s Happening Here?
@@ -189,9 +230,26 @@ def prepare_input(domain, wordlist_path):
     words = load_wordlist(wordlist_path)
     if not words:
         print("[!] No words loaded from wordlist.")
-        return domain, []
+        return None, []
 
     return domain, words
+    
+"""
+  What's Happening Here ?
+
+    Validates the input domain and loads the associated wordlist.
+
+    What this does:
+    1. Verifies if the input domain is valid using a regular expression.
+    2. Loads and sanitizes the wordlist from the given file path.
+    3. Prevents further execution if either input is invalid.
+
+    Returns:
+        - (None, []) if the domain is invalid
+        - (None, []) if the wordlist is missing or empty
+        - (domain, wordlist) tuple if both are valid
+"""
+  
 ```
 
 #### 🧠 What’s Happening Here?
@@ -218,3 +276,5 @@ A ready-to-use input set that looks like:
 ```
 
 ***
+
+<mark style="color:$success;">Now</mark> <mark style="color:$success;"></mark><mark style="color:$success;">**we shall test this script, so look out for the next sub-page**</mark> [**Creating a test.py for input\_handler.py**](https://app.gitbook.com/o/S8ryH0vAvYEHMKmmraM2/s/M6VSMZcJH3jwhttYSu6b/~/changes/48/projects/dns-enumeration-framework-day-1/day-1-writing-modules/creating-a-test.py-for-input_handler.py)
