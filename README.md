@@ -77,27 +77,39 @@ description: >-
 
 ### 🗂️ **Project Folder Structure**
 
-<pre><code>dns_enum_framework/
-├── main.py                # Entry point
-├── config.py              # Configurations
-├── modules/               # Core functionality
-<strong>│   ├── input_handler.py
-</strong>│   ├── enumerator.py
-│   ├── resolver.py
-│   ├── probe.py
-│   ├── enricher.py
-│   ├── exporter.py
-│   └── ui.py
-├── data/
-│   ├── wordlists/         # Wordlists for brute-force
-│   └── samples/           # Example domains
+```
+dns_enum_framework/
 │
-├── test_input.py  
+├── main.py                     # Entry point for execution
+├── config.py                   # Central configuration settings
+├── README.md                   # Overview and usage instructions
 │
-├── results/               # Output files
-├── README.md              # Overview &#x26; usage
-└── PROJECT_JOURNAL.md     # Your progress log (optional)
-</code></pre>
+├── modules/                    # Core logic of your DNS scanner
+│   ├── input_handler.py        # Validates domain and loads wordlist
+│   ├── enumerator.py           # Generates subdomain candidates
+│   ├── resolver.py             # Resolves DNS records
+│   ├── probe.py                # Probes for live hosts (HTTP, ping)
+│   ├── enricher.py             # Adds metadata (WHOIS, GeoIP)
+│   ├── exporter.py             # Formats and saves results
+│   └── ui.py                   # CLI / interface components
+│
+├── data/                       # Static input files
+│   ├── wordlists/              # Brute-force subdomain lists
+│   └── samples/                # Example domains for test runs
+│
+├── results/                    # Output of scans and test logs
+│
+├── test_scripts/               # Individual test files per module
+│   ├── test_input.py           # Tests input_handler module
+│   ├── test_enumerator.py      # Tests subdomain generation
+│   ├── test_resolver.py        # Tests DNS record lookups
+│   ├── test_probe.py           # Tests probing logic
+│   ├── test_enricher.py        # Tests enrichment components
+│   ├── test_exporter.py        # Tests result formatting/exporting
+│   └── test_ui.py              # Tests CLI or interface layer
+│
+└── PROJECT_JOURNAL.md          # Your progress log (optional)
+```
 
 ***
 
@@ -111,7 +123,7 @@ description: >-
 | `data/wordlists/`    | Houses brute-force subdomain files                            |
 | `data/samples/`      | Test domains or known targets for dry runs                    |
 | `results/`           | Saves scan output (JSON, CSV, Markdown, etc.)                 |
-| `test_input.py`      | Module tester to validate inputs before scanning              |
+| `test_scripts`       | This folder keeps all the test scripts for each module        |
 | `README.md`          | External-facing: overview, usage instructions, CLI options    |
 | `PROJECT_JOURNAL.md` | Internal-facing: your logs, learnings, design choices, TODOs  |
 
@@ -143,7 +155,8 @@ $folders = @(
     "$root\data",
     "$root\data\wordlists",
     "$root\data\samples",
-    "$root\results"
+    "$root\results",
+    "$root\test_scripts"
 )
 
 foreach ($folder in $folders) {
@@ -153,7 +166,13 @@ foreach ($folder in $folders) {
 $files = @(
     "$root\main.py",
     "$root\config.py",
-    "$root\test.py",
+    "$root\test_scripts\test_input.py",
+    "$root\test_scripts\test_enumerator.py",
+    "$root\test_scripts\test_resolver.py",
+    "$root\test_scripts\test_probe.py",
+    "$root\test_scripts\test_enricher.py",
+    "$root\test_scripts\test_exporter.py",
+    "$root\test_scripts\test_ui.py",
     "$root\modules\input_handler.py",
     "$root\modules\enumerator.py",
     "$root\modules\resolver.py",
@@ -180,33 +199,43 @@ Write-Host "✅ Project structure created at $root"
 
 root="dns_enum_framework"
 folders=(
-    "$root/modules"
-    "$root/data/wordlists"
-    "$root/data/samples"
-    "$root/results"
+  "$root"
+  "$root/modules"
+  "$root/data"
+  "$root/data/wordlists"
+  "$root/data/samples"
+  "$root/results"
+  "$root/test_scripts"
 )
-
-mkdir -p "$root"
-for folder in "${folders[@]}"; do
-    mkdir -p "$folder"
-done
 
 files=(
-    "$root/main.py"
-    "$root/config.py"
-    "$root/test.py"
-    "$root/modules/input_handler.py"
-    "$root/modules/enumerator.py"
-    "$root/modules/resolver.py"
-    "$root/modules/probe.py"
-    "$root/modules/enricher.py"
-    "$root/modules/exporter.py"
-    "$root/modules/ui.py"
-    "$root/README.md"
+  "$root/main.py"
+  "$root/config.py"
+  "$root/test_scripts/test_input.py"
+  "$root/test_scripts/test_enumerator.py"
+  "$root/test_scripts/test_resolver.py"
+  "$root/test_scripts/test_probe.py"
+  "$root/test_scripts/test_enricher.py"
+  "$root/test_scripts/test_exporter.py"
+  "$root/test_scripts/test_ui.py"
+  "$root/modules/input_handler.py"
+  "$root/modules/enumerator.py"
+  "$root/modules/resolver.py"
+  "$root/modules/probe.py"
+  "$root/modules/enricher.py"
+  "$root/modules/exporter.py"
+  "$root/modules/ui.py"
+  "$root/README.md"
 )
 
+# Create folders
+for folder in "${folders[@]}"; do
+  mkdir -p "$folder"
+done
+
+# Create empty files
 for file in "${files[@]}"; do
-    touch "$file"
+  touch "$file"
 done
 
 echo "✅ Project structure created at $root"
