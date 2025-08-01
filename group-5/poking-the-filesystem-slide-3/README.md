@@ -4,7 +4,7 @@
 
 ***
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 ### <mark style="color:yellow;">**USER SPACE Kya Hai?**</mark>
 
@@ -88,7 +88,7 @@
 
 ***
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 ### <mark style="color:yellow;">VFS (Virtual Filesystem Switch)</mark>
 
@@ -156,7 +156,7 @@
 
 ***
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 ### <mark style="color:yellow;">**FILESYSTEM IMPLEMENTATIONS**</mark>
 
