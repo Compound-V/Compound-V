@@ -66,12 +66,10 @@ Hackers filesystem ke weaknesses ka fayda uthate hain:
 * Hackers metadata ya data manipulate karke software ko fool kar sakte hain.
 * Rootkits aur kernel attacks se fake data dikha kar system hack hota hai.
 * Solutions: Cryptographic hash, kernel monitoring, file integrity checks, aur sandboxing zaroori hain.\
-  \
+  <br>
 
-
-<mark style="color:yellow;">**Follow up questions to slide 1 -**</mark>\
-
-
+<mark style="color:yellow;">**Follow up questions to slide 1 -**</mark><br>
+---------------------------------------------------------------------------
 
 #### <mark style="color:yellow;">**1. Filesystem "Safe" ya "Unsafe" Tags Kaise Decide Karta Hai?**</mark>
 

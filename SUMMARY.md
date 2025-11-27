@@ -116,4 +116,10 @@
 ## Group 4
 
 * [Find Command](group-4/find-command.md)
+* [/root/code\_executor\_modal.py](group-4/root-code_executor_modal.py.md)
 * [Page 8](group-4/page-8.md)
+* [Recursive File Finder](group-4/recursive-file-finder.md)
+
+## Group 6
+
+* [Page 11](group-6/page-11.md)
