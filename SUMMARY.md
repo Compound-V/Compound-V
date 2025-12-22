@@ -125,3 +125,8 @@
 * [Page 11](group-6/page-11.md)
 * [Page 12](group-6/page-12.md)
 * [Page 14](group-6/page-14.md)
+
+## Git and Github
+
+* [git\_hub\_ssh\_setup\_q\_a\_guide.md](git-and-github/git_hub_ssh_setup_q_a_guide.md.md)
+* [git\_git\_hub\_setup\_q\_a\_from\_empty\_repo\_to\_push.md](git-and-github/git_git_hub_setup_q_a_from_empty_repo_to_push.md.md)
