@@ -1,19 +1,5 @@
 ---
 icon: vial-virus
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # (Day-2) Creating a test.py for input\_handler.py

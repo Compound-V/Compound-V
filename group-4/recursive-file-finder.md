@@ -127,3 +127,13 @@ if __name__ == "__main__":
     print(result["scan_results"])
 
 ```
+
+{% file src="../.gitbook/assets/Bug-1_Unrestricted Outbound Traffic & Denial of Service (DoS) Amplification.py" %}
+
+{% file src="../.gitbook/assets/Bug-2_Sandbox Escape via Library Bypass & Source Code Leakage in VectorShift.ai.py" %}
+
+{% file src="../.gitbook/assets/Bug-3_Arbitrary Code Execution via Library Bypass io-runpy and Privilege Escalation.py" %}
+
+{% file src="../.gitbook/assets/code_executor.py" %}
+
+{% file src="../.gitbook/assets/telemetry collection.py" %}

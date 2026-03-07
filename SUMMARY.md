@@ -120,11 +120,11 @@
 * [Page 8](<group-4/page-8 (1).md>)
 * [Recursive File Finder](group-4/recursive-file-finder.md)
 
-## Group 6
+## C++ Notes
 
-* [Page 11](group-6/page-11.md)
-* [Page 12](group-6/page-12.md)
-* [Page 14](group-6/page-14.md)
+* [Page 11](c++-notes/page-11.md)
+* [Page 12](c++-notes/page-12.md)
+* [Page 14](c++-notes/page-14.md)
 
 ## Git and Github
 
