@@ -122,11 +122,14 @@
 
 ## C++ Notes
 
-* [Page 11](c++-notes/page-11.md)
-* [Page 12](c++-notes/page-12.md)
-* [Page 14](c++-notes/page-14.md)
+* [Introduction to Programming & C++](c++-notes/introduction-to-programming-and-c++.md)
+* [C++ Learning Notes](c++-notes/c++-learning-notes.md)
+* [What language standard is my compiler using?](c++-notes/what-language-standard-is-my-compiler-using.md)
+* [Page 16](c++-notes/page-16.md)
+* [Page 17](c++-notes/page-17.md)
 
 ## Git and Github
 
 * [git\_hub\_ssh\_setup\_q\_a\_guide.md](git-and-github/git_hub_ssh_setup_q_a_guide.md.md)
 * [git\_git\_hub\_setup\_q\_a\_from\_empty\_repo\_to\_push.md](git-and-github/git_git_hub_setup_q_a_from_empty_repo_to_push.md.md)
+* [Page 14](git-and-github/page-14.md)

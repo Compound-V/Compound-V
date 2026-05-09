@@ -1,4 +1,4 @@
-# Page 12
+# C++ Learning Notes
 
 ## C++ Learning Notes
 
@@ -177,7 +177,7 @@ graph LR
 
 ***
 
-### INTRODUCTION TO C/C++
+### Introduction to C/C++
 
 * The C language was developed in 1972 by Dennis Ritchie at Bell Telephone labs, Ritchie's primary goal were to produce a minimalistic language that was easy to compile, allowed efficient access to memory, produce efficient code and was self-contained, by 1973 it ended up being so efficient that most of UNIX was rewritten in C. The C language has excellent portability.
 * In 1983 the American National Standards Institute (ANSI) formed a committee to establish a formal standard for C. In 1989 they released the first standard for C, which was called C89 or more commonly ANSI C and in 1990 ISO adopted ANSI C with a few modifications and it was came to be called as C90 and in 1999 ISO again relased a revised version of the standards and it was called C99. C99 adopted many features which had already made their way into compilers as extensions, or had been implemented in C++.
@@ -238,7 +238,7 @@ When you sit down and start coding right away, you’re typically thinking “I 
 
 use a code editor, it makes it easy to read and manage the code.
 
-**Step 4: Compiling your source code**
+#### **Step 4: Compiling your source code**
 
 The C++ compiler sequentially goes through each source code (.cpp) file in your program and does two important tasks:
 
@@ -250,7 +250,7 @@ Object files are typically named name.o or name.obj, where name is the same name
 
 eg. --> source file: main.cpp --> object file: main.o
 
-**Step 5: Linking object files and libraries and creating the desired output file**
+#### **Step 5: Linking object files and libraries and creating the desired output file**
 
 After the compiler has successfully finished, another program called the **linker** kicks in. The linker’s job is to combine all of the object files and produce the desired output file (such as an executable file that you can run). This process is called linking. If any step in the linking process fails, the linker will generate an error message describing the issue and then abort.
 
